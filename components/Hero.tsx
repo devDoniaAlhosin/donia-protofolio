@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { cn } from "@/lib/utils";
@@ -7,7 +8,6 @@ import { FaLocationArrow } from "react-icons/fa";
 import Header from "./Header";
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36 ">
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
@@ -46,7 +46,7 @@ const Hero = () => {
             <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
               Hi! I'm Donia Alhosin, a FullStack Developer based in Egypt.
             </p>
-            <a href="#about">
+            <a href="#projects">
               <MagicButton
                 title="Show My Work"
                 icon={<FaLocationArrow />}
@@ -56,7 +56,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 
