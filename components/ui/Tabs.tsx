@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
@@ -16,12 +15,14 @@ export const Tabs = ({
   activeTabClassName,
   tabClassName,
   contentClassName,
+  onTabChange,
 }: {
   tabs: Tab[];
   containerClassName?: string;
   activeTabClassName?: string;
   tabClassName?: string;
   contentClassName?: string;
+  onTabChange?: (tab: Tab) => void;
 }) => {
   const [active, setActive] = useState<Tab>(propTabs[0]);
   const [tabs, setTabs] = useState<Tab[]>(propTabs);
@@ -32,6 +33,7 @@ export const Tabs = ({
     newTabs.unshift(selectedTab[0]);
     setTabs(newTabs);
     setActive(newTabs[0]);
+    onTabChange?.(newTabs[0]);
   };
 
   const [hovering, setHovering] = useState(false);
@@ -40,7 +42,7 @@ export const Tabs = ({
     <>
       <div
         className={cn(
-          "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+          "flex flex-row items-end justify-end [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
           containerClassName
         )}
       >

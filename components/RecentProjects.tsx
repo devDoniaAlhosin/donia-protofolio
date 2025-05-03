@@ -1,28 +1,43 @@
+"use client";
+
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/ProjectPin";
 import { Tabs } from "@/components/ui/Tabs";
+import { useState } from "react";
 
 const RecentProjects = () => {
+  const [activeTab, setActiveTab] = useState("all");
+
   const tabs = [
     { title: "All ", value: "all" },
     { title: "Web Templetes", value: "web" },
-    { title: "Wordpress", value: "mobile" },
-    { title: "Figma Layouts", value: "design" },
+    { title: "Wordpress", value: "wordpress" },
+    { title: "Figma Layouts", value: "figma" },
   ];
+
+  const filteredProjects = projects.filter((project) => {
+    if (activeTab === "all") return true;
+    return project.category === activeTab;
+  });
+
   return (
-    <div className="py-20 text-center" id="projects">
+    <div className="py-20 sm:py-10 " id="projects">
       <h1 className="text-4xl md:text-5xl font-bold text-e-white">
         A Small Selection of{" "}
         <span className="text-purple-400">Recent Projects</span>
       </h1>
-      <div className="my-10  w-fit   p-2  border-1 border-e-white  rounded-full  mx-auto">
-        <Tabs tabs={tabs} />
+      <div className="mt-10 w-fit p-2 border-1 border-e-white rounded-full ">
+        <Tabs 
+          tabs={tabs.map(tab => ({ ...tab, content: null }))} 
+          containerClassName="flex flex-row items-center justify-end"
+          onTabChange={(tab) => setActiveTab(tab.value)}
+        />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-5 px-4 auto-rows-[32.5rem]">
-        {projects.map((item) => (
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-8  px-4 auto-rows-[27.4rem]">
+        {filteredProjects.map((item) => (
           <div
-            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
+            className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-full w-[80vw]"
             key={item.id}
           >
             <PinContainer
@@ -46,7 +61,6 @@ const RecentProjects = () => {
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 text-left">
                 {item.title}
               </h1>
-
               <p
                 className="lg:text-xl lg:font-normal font-light text-left text-[10px] line-clamp-2"
                 style={{
@@ -56,7 +70,6 @@ const RecentProjects = () => {
               >
                 {item.des}
               </p>
-
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
                   {item.iconLists.map((icon, index) => (
