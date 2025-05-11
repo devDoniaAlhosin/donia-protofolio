@@ -21,7 +21,7 @@
     "@tabler/icons-react": "^3.31.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.0.5",
-    "motion": "^10.17.0",
+    "motion": "10.18.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
