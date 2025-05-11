@@ -2,15 +2,14 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  experimental: {
-    // Enable build cache
-    turbotrace: {
-      logLevel: 'error',
-      contextDirectory: __dirname,
-    },
+  images: {
+    unoptimized: true,
+    domains: ['github.com', 'raw.githubusercontent.com'],
   },
   // Configure build output
-  output: 'standalone',
+  output: 'export',
+  // Disable server-side features since we're using static export
+  trailingSlash: true,
   // Enable build cache
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
