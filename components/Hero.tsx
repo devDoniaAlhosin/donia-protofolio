@@ -3,7 +3,7 @@ import React from "react";
 import { Spotlight } from "./ui/Spotlight";
 import { cn } from "@/lib/utils";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
-import MagicButton from "./ui/MagicButton";
+import { MagicButton } from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import Header from "./Header";
 const Hero = () => {
