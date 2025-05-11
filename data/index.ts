@@ -114,6 +114,23 @@ export const projects = [
   },  
   {
     id: 3,
+    name: "DonDigitalTech",
+    title: "DonDigitalTech – Empowering the Future of Digital Solutions",
+    stack: ["PHP", "WordPress", "WooCommerce", "CSS"],
+    des:
+      "DonDigitalTech is a results-driven digital agency specializing in custom WordPress and WooCommerce solutions. With a focus on functionality, performance, and user experience, we help businesses transform ideas into powerful web platforms that drive growth.",
+    img: "/p3.png",
+    iconLists: [
+      "/php-logo.webp",
+      "/wp-logo.webp",
+      "/woocomerce.png",
+      "/css-logo.webp"
+    ],
+    link: "https://dondigitaltech.com/",
+    category: "wordpress",
+  }, 
+  {
+    id: 4,
     stack: ["WordPress"],
     title: "AI Image SaaS - Canva Application",
     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
@@ -123,7 +140,7 @@ export const projects = [
     category: "wordpress",
   },
   {
-    id: 4,
+    id: 5,
     stack: ["WordPress", "GSAP", "Three.js"],
     title: "Animated Apple Iphone 3D Website",
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects.",
