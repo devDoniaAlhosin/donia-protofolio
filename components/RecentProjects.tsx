@@ -51,7 +51,7 @@ const RecentProjects = () => {
                 >
                   <img src="/bg.png" alt="bgimg" />
                 </div>
-                <div className="absolute  overflow-hidden  absolute bottom-[-19px] w-[90%] rounded-[12px] z-10 left-1/2 translate-x-[-50%] pt-10 rotate-6">
+                <div className="absolute  overflow-hidden  absolute bottom-[-16px] w-[90%] rounded-[12px] z-10 left-1/2 translate-x-[-50%] pt-10 rotate-6">
                   <img
                     src={item.img}
                     alt="cover"

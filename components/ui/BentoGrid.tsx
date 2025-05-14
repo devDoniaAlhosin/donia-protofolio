@@ -4,7 +4,7 @@ import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
 import { GlobeDemo } from "../ui/GridGlobe";
 import { ThreeDMarquee } from "./Marquee";
 import { images } from "@/data";
-import MagicButton from "./MagicButton";
+import { MagicButton } from "./MagicButton";
 import { useState } from "react";
 
 import { IoCopyOutline } from "react-icons/io5";
