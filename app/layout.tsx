@@ -1,9 +1,6 @@
 import { Metadata } from "next";
 import "./globals.css";
-import {
-  ThemeProvider as NextThemesProvider,
-  ThemeProvider,
-} from "next-themes";
+import { ThemeProvider } from "next-themes";
 
 import { Roboto } from "next/font/google";
 

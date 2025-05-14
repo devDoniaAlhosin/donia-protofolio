@@ -2,7 +2,6 @@ import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { FaHome, FaUser, FaProjectDiagram, FaBriefcase, FaEnvelope } from "react-icons/fa";
 import JobsTL from "@/components/JobsTL";
 import { MyApproach } from "@/components/MyApproach";
 import Footer from "@/components/Footer";

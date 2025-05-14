@@ -4,14 +4,15 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { navItems } from "@/data";
 
-
 export const FloatingNav = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <nav className="fixed top-6 left-1/2 z-50 -translate-x-1/2 w-[95vw] max-w-2xl z-[10000]   ">
       <div className="flex items-center justify-between px-4 py-2 bg-[#0F1229] rounded-[12px] shadow-lg">
-        <a href="/"><span className="text-white font-bold text-lg">MyPortfolio</span></a>
+        <Link href="/">
+          <span className="text-white font-bold text-lg">MyPortfolio</span>
+        </Link>
         {/* Hamburger for mobile */}
         <button
           className="md:hidden text-white focus:outline-none"

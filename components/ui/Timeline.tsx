@@ -1,10 +1,5 @@
 "use client";
-import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
-} from "motion/react";
+import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -51,7 +46,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         const sectionHeight = sectionRect.height;
 
         // Calculate the section's position relative to the container
-        const sectionProgress = (sectionTop + sectionHeight / 2) / containerHeight;
+        const sectionProgress =
+          (sectionTop + sectionHeight / 2) / containerHeight;
 
         // If the section is in the middle of the viewport
         if (sectionProgress >= 0.4 && sectionProgress <= 0.6) {
@@ -60,8 +56,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -72,7 +68,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           <span className="text-purple-400"> Work & Education</span>
         </h1>
         <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          Here's a timeline showcasing my professional experiences, diplomas, and educational milestones.
+          Here's a timeline showcasing my professional experiences, diplomas,
+          and educational milestones.
         </p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-5">
@@ -97,7 +94,13 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
-              <div className={index === activeIndex ? "bg-gradient-to-r from-purple-500/10 to-blue-500/10 p-4 rounded-lg" : ""}>
+              <div
+                className={
+                  index === activeIndex
+                    ? "bg-gradient-to-r from-purple-500/10 to-blue-500/10 p-4 rounded-lg"
+                    : ""
+                }
+              >
                 {item.content}
               </div>
             </div>

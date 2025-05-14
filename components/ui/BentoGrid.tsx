@@ -49,13 +49,6 @@ export const BentoGridItem = ({
   id?: number;
 }) => {
   const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    animationData,
-    loop: true,
-    autoplay: copied,
-  };
-
   const handleCopy = () => {
     const text = "doniaelhussien@gmail.com";
     navigator.clipboard.writeText(text);
