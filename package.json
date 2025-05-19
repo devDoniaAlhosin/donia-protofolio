@@ -19,6 +19,7 @@
     "@splinetool/react-spline": "^4.0.0",
     "@splinetool/runtime": "^1.9.82",
     "@tabler/icons-react": "^3.31.0",
+    "@tailwindcss/postcss": "4.1.7",
     "clsx": "^2.1.1",
     "framer-motion": "^12.7.5",
     "motion": "^12.10.5",
