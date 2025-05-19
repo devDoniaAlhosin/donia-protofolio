@@ -1,13 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     unoptimized: true,
-    domains: ['github.com', 'raw.githubusercontent.com'],
+    domains: ["github.com", "raw.githubusercontent.com"],
   },
   // Configure build output
-  output: 'export',
+  output: "export",
   // Disable server-side features since we're using static export
   trailingSlash: true,
   // Enable build cache
@@ -17,6 +16,6 @@ const nextConfig = {
     // number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2,
   },
-}
+};
 
-module.exports = nextConfig 
+module.exports = nextConfig;
