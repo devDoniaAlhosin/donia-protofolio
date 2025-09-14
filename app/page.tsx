@@ -1,7 +1,11 @@
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
+import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import { FaHome } from "react-icons/fa";
+import JobsTL from "@/components/JobsTL";
+import { MyApproach } from "@/components/MyApproach";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
     <main>
@@ -10,11 +14,13 @@ export default function Home() {
       mx-auto sm:px-10 px-5 "
       >
         <div className="max-w-7xl w-full">
-          <FloatingNav
-            navItems={[{ name: "Home", link: "/", icon: <FaHome /> }]}
-          />
+          <FloatingNav />
           <Hero />
           <Grid />
+          <RecentProjects />
+          <JobsTL />
+          <MyApproach />
+          <Footer />
         </div>
       </div>
     </main>

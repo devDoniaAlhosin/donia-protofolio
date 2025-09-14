@@ -4,7 +4,7 @@ import { BackgroundGradientAnimation } from "./BackgroundGradientAnimation";
 import { GlobeDemo } from "../ui/GridGlobe";
 import { ThreeDMarquee } from "./Marquee";
 import { images } from "@/data";
-import MagicButton from "./MagicButton";
+import { MagicButton } from "./MagicButton";
 import { useState } from "react";
 
 import { IoCopyOutline } from "react-icons/io5";
@@ -49,13 +49,6 @@ export const BentoGridItem = ({
   id?: number;
 }) => {
   const [copied, setCopied] = useState(false);
-
-  const defaultOptions = {
-    animationData,
-    loop: true,
-    autoplay: copied,
-  };
-
   const handleCopy = () => {
     const text = "doniaelhussien@gmail.com";
     navigator.clipboard.writeText(text);

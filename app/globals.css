@@ -3,7 +3,9 @@
 @theme {
   --color-black-100: #000319;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 @keyframes spotlight {
   0% {
     opacity: 0;
@@ -59,4 +61,13 @@
       transform: translateY(-50%);
     }
   }
+}
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
 }
